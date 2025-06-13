@@ -1,41 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Travel Planner App</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet">
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore & Plan</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;600;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <nav>
-    <img src="assets/icons/airplane.png" alt="Travel Planner Logo"
-         style="height: 80px; vertical-align: middle; margin-right: 10px;">
-    <h1>Travel Planner</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="explore-plan.html">Explore &amp; Plan</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact-us.html">Contact&nbsp;Us</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <img src="assets/icons/airplane.png" alt="Travel Planner Logo"
+            style="height: 80px; vertical-align: middle; margin-right: 10px;">
+        <h1>Travel Planner</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore-plan.html">Explore &amp; Plan</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact-us.html">Contact&nbsp;Us</a></li>
+        </ul>
+    </nav>
 
-  <section class="itinerary-section">
-    <h2>Trip Itinerary</h2>
-
-    <div class="itinerary-controls">
-      <button id="addDayBtn"    class="itinerary-btn">+ Add Day</button>
-      <button id="deleteDayBtn" class="itinerary-btn danger">🗑 Delete&nbsp;Day</button>
-      <div   id="daySelector"   class="day-selector"></div>
+    <!-- Favorites Modal -->
+    <div id="favoritesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>My Saved Favorites</h2>
+            <div id="favoritesList" class="favorites-list"></div>
+        </div>
     </div>
 
-    <div id="itineraryContainer" class="itinerary-container"></div>
-  </section>
+    <!-- Favorites Button -->
+    <div class="favorites-btn-container">
+        <button id="viewFavoritesBtn" class="favorites-btn">
+            ★ My Favorites <span id="favoritesCount"></span>
+        </button>
+    </div>
 
-  <script src="js/itinerary.js"></script>
+    <!-- Itinerary Section -->
+    <section class="itinerary-section">
+        <h2>Trip Itinerary</h2>
+        <div class="itinerary-controls">
+            <button id="addDayBtn" class="itinerary-btn">+ Add Day</button>
+            <button id="deleteDayBtn" class="itinerary-btn danger">🗑 Delete&nbsp;Day</button>
+            <div id="daySelector" class="day-selector"></div>
+        </div>
+        <div id="itineraryContainer" class="itinerary-container"></div>
+    </section>
+
+        <section class="search-section">
+        <input type="text" id="cityInput" placeholder="Enter a city" aria-label="City search input">
+        <button id="searchButton" class="search-btn">Find Attractions</button>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label for="rating-filter">Minimum Rating:</label>
+                <select id="rating-filter">
+                    <option value="0">Any Rating</option>
+                    <option value="4">4+ Stars</option>
+                    <option value="4.5">4.5+ Stars</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="locality-filter">Area:</label>
+                <select id="locality-filter">
+                    <option value="">All Areas</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="rating-desc">Highest Rated</option>
+                    <option value="rating-asc">Lowest Rated</option>
+                    <option value="reviews-desc">Most Reviews</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="results" class="results-container"></div>
+    </section>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/itinerary.js"></script>
+    <script src="js/favorites.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize UI components
+            initUI(); // This activates the search functionality
+
+            // Initialize favorites
+            updateFavoritesCount();
+
+            // Initialize itinerary
+            initItinerary();
+        });
+    </script>
 </body>
+
 </html>

@@ -188,6 +188,10 @@ function createPlaceCard(place) {
         card.appendChild(img);
     }
 
+    if (typeof addFavoriteButton === 'function') {
+        addFavoriteButton(card, place);
+    }
+
     return card;
 }
 
