@@ -204,7 +204,7 @@ nav ul li a:hover {
     background: #f5f5f5;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .filter-group {
@@ -312,4 +312,128 @@ nav ul li a:hover {
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #ccc;
+}
+
+/* ----------------------------- Itinerary Section --------------------------------------- */
+.itinerary-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Controls */
+.itinerary-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.day-selector {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Day tabs */
+.day-tab {
+    padding: 8px 15px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.day-tab.active {
+    background: #6B9080;
+    color: #fff;
+}
+
+/* Itinerary card */
+.itinerary-container {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Time‑slot row */
+.time-slot {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.time-slot:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Inputs */
+.time-slot input[type="time"],
+.time-slot input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.time-slot input[type="time"] {
+    width: 110px;
+}
+
+.time-slot input[type="text"] {
+    flex: 1;
+}
+
+/* Buttons */
+.add-slot-btn,
+.itinerary-btn {
+    padding: 8px 15px;
+    background-color: #6B9080;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-slot-btn:hover,
+.itinerary-btn:hover {
+    background-color: #5a7c6d;
+}
+
+/* Danger / delete styles */
+.itinerary-btn.danger,
+.slot-delete-btn {
+    background-color: #c62828;
+}
+
+.itinerary-btn.danger:hover,
+.slot-delete-btn:hover {
+    background-color: #a91d1d;
+}
+
+.slot-delete-btn {
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    line-height: 24px;
+    text-align: center;
+}
+
+/* Notes area */
+.day-notes textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
 }

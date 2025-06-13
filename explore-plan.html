@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Planner App</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <img src="assets/icons/airplane.png" alt="Travel Planner Logo"
+         style="height: 80px; vertical-align: middle; margin-right: 10px;">
+    <h1>Travel Planner</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="explore-plan.html">Explore &amp; Plan</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact-us.html">Contact&nbsp;Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="itinerary-section">
+    <h2>Trip Itinerary</h2>
+
+    <div class="itinerary-controls">
+      <button id="addDayBtn"    class="itinerary-btn">+ Add Day</button>
+      <button id="deleteDayBtn" class="itinerary-btn danger">🗑 Delete&nbsp;Day</button>
+      <div   id="daySelector"   class="day-selector"></div>
+    </div>
+
+    <div id="itineraryContainer" class="itinerary-container"></div>
+  </section>
+
+  <script src="js/itinerary.js"></script>
+</body>
+</html>
