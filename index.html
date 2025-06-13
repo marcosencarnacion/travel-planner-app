@@ -36,6 +36,34 @@
     <section class="search-section">
         <input type="text" id="cityInput" placeholder="Enter a city" aria-label="City search input">
         <button id="searchButton" class="search-btn">Find Attractions</button>
+        
+        <div class="filters">
+            <div class="filter-group">
+                <label for="rating-filter">Minimum Rating:</label>
+                <select id="rating-filter">
+                    <option value="0">Any Rating</option>
+                    <option value="4">4+ Stars</option>
+                    <option value="4.5">4.5+ Stars</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="locality-filter">Area:</label>
+                <select id="locality-filter">
+                    <option value="">All Areas</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="rating-desc">Highest Rated</option>
+                    <option value="rating-asc">Lowest Rated</option>
+                    <option value="reviews-desc">Most Reviews</option>
+                </select>
+            </div>
+        </div>
+        
         <div id="results" class="results-container"></div>
     </section>
 
