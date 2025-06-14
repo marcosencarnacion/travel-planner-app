@@ -638,3 +638,65 @@ nav ul li a:hover {
         height: auto;
     }
 }
+
+/* ------------------------------------- Budget Section Style -------------------------------- */
+
+/* Add to style.css */
+.budget-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.budget-category {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.budget-category select,
+.budget-category input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.budget-category input {
+    flex: 1;
+    max-width: 150px;
+}
+
+.remove-category {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.budget-summary {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+#budgetTotal {
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.save-btn {
+    padding: 8px 16px;
+    background: #6B9080;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
