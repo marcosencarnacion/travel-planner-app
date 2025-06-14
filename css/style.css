@@ -651,6 +651,7 @@ nav ul li a:hover {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .budget-section {
