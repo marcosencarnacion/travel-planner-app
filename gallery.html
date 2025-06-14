@@ -24,12 +24,22 @@
         </ul>
     </nav>
 
+    <section class="unsplash-gallery">
+        <h2>Travel Inspiration</h2>
+        <div class="search-controls">
+            <input type="text" id="photoSearch" placeholder="Search destinations...">
+            <button id="searchPhotosBtn">Search</button>
+        </div>
+        <div id="unsplashResults" class="photo-grid"></div>
+    </section>
+
     <main class="gallery-container">
         <h2>My Travel Favorites</h2>
         <div id="favoritesGallery" class="favorites-grid"></div>
     </main>
 
     <script src="js/favorites.js"></script>
+    <script src="js/unsplash.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Render favorites in gallery view
