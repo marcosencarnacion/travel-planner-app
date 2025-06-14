@@ -1,5 +1,4 @@
 // Hero Image Rotation
-// Hero Image Rotation
 document.addEventListener('DOMContentLoaded', () => {
     const heroSection = document.querySelector('.hero');
     const imageFolder = 'assets/images/';

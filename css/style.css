@@ -762,7 +762,7 @@ nav ul li a:hover {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-#cityInput {
+#weatherCityInput {
     width: 100%;
     padding: 15px;
     margin-bottom: 10px;

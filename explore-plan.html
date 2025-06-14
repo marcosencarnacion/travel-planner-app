@@ -51,7 +51,7 @@
         <div id="itineraryContainer" class="itinerary-container"></div>
 
         <div class="weather-widget">
-            <input type="search" id="cityInput" placeholder="Search city..." />
+            <input type="search" id="weatherCityInput" placeholder="Search city..." />
             <div id="weatherWidget"></div>
         </div>
     </section>
@@ -104,21 +104,18 @@
         <div id="results" class="results-container"></div>
     </section>
 
+
     <script src="js/api.js"></script>
-    <script src="js/ui.js"></script>
+    <script src="js/ui.js"></script> <!-- Must come before other feature scripts -->
     <script src="js/itinerary.js"></script>
     <script src="js/favorites.js"></script>
     <script src="js/budget.js"></script>
     <script src="js/weather.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize UI components
-            initUI(); // This activates the search functionality
-
-            // Initialize favorites
+            initUI(); // This initializes the search functionality
             updateFavoritesCount();
-
-            // Initialize itinerary
             initItinerary();
         });
     </script>

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (weatherContainer) {
         fetchWeather('New York');
 
-        const cityInput = document.getElementById('cityInput');
+        const cityInput = document.getElementById('weatherCityInput');
         if (cityInput) {
             cityInput.addEventListener('search', (e) => {
                 fetchWeather(e.target.value);
