@@ -1,6 +1,6 @@
 // unsplash.js
 document.addEventListener('DOMContentLoaded', () => {
-    const ACCESS_KEY = 'xPNraEXz6Oz9vCa2J4HIFTtK9FdEUwb-SxeYmEcZOCs'; // Replace with your key
+    const ACCESS_KEY = 'xPNraEXz6Oz9vCa2J4HIFTtK9FdEUwb-SxeYmEcZOCs';
     const resultsContainer = document.getElementById('unsplashResults');
     const searchInput = document.getElementById('photoSearch');
     const searchBtn = document.getElementById('searchPhotosBtn');
