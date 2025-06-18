@@ -677,6 +677,8 @@ nav ul li a:hover {
 
 .attraction-card:hover {
     transform: translateY(-5px);
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
 }
 
 .attraction-card h3 {

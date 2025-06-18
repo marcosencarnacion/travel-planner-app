@@ -1,0 +1,136 @@
+/* ===== Mobile-First Media Queries ===== */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    nav ul {
+        flex-wrap: nowrap;
+        width: auto;
+        margin-top: 0;
+    }
+    
+    .filters {
+        flex-direction: row;
+    }
+    
+    .filter-group {
+        width: auto;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .results-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .photo-grid, 
+    .favorites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-container {
+        flex-direction: row;
+    }
+    
+    .contact-form, 
+    .contact-info {
+        width: 48%;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .itinerary-controls {
+        flex-direction: row;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .results-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .photo-grid, 
+    .favorites-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .mission-container {
+        flex-direction: row;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .photo-grid, 
+    .favorites-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===== Mobile-Specific Adjustments ===== */
+@media (max-width: 575.98px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav img {
+        margin: 0 auto 10px !important;
+    }
+    
+    nav h1 {
+        margin: 0 auto 15px;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .cta-button {
+        margin: 0 auto;
+    }
+    
+    .day-selector {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+    
+    .faq-item {
+        width: 100%;
+    }
+    
+    .team-member {
+        margin-bottom: 30px;
+    }
+}
+
+/* ===== Tablet Landscape Orientation ===== */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .results-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .attraction-card {
+        min-height: 300px;
+    }
+}
+
+/* ===== High-DPI Devices ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    /* Optional: Add high-res image styles */
+    .hero {
+        background-image: url('images/hero@2x.jpg');
+    }
+}

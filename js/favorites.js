@@ -173,3 +173,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${API_KEY}`;
     }
 });
+
+// Self-initialization
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof updateFavoritesCount === 'function') {
+        updateFavoritesCount();
+    }
+});

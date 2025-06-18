@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;600;700&family=Roboto&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -105,20 +106,21 @@
         <div id="results" class="results-container"></div>
     </section>
 
-
+    <!-- Script Loading Order Matters! -->
     <script src="js/api.js"></script>
-    <script src="js/ui.js"></script> <!-- Must come before other feature scripts -->
+    <script src="js/ui.js"></script>
     <script src="js/itinerary.js"></script>
-    <script src="js/favorites.js"></script>
+    <script src="js/favorites.js"></script> <!-- Defines updateFavoritesCount -->
     <script src="js/budget.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/contact-us.js"></script>
 
+    <!-- Initialize after all scripts load -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            initUI(); // This initializes the search functionality
-            updateFavoritesCount();
-            initItinerary();
+            initUI(); // Initialize search functionality
+            initItinerary(); // Initialize itinerary
+            // updateFavoritesCount() is now called from within favorites.js
         });
     </script>
 

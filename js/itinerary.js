@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     /* ---------- DOM refs ---------- */
     const addDayBtn = document.getElementById('addDayBtn');
